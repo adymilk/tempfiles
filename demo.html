@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>demo</title>
-	<meta charset="utf-8">
-	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-
-	
+<title>demo</title>
+<meta charset="utf-8">
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
 <style>
@@ -16,7 +14,6 @@
 			z-index: 999;
 			background-image: url(https://i.loli.net/2018/04/19/5ad84e8f0069c.png);
 		}
-
 		.Dialog #Dialog_close{
 			position: absolute;
 			right: 0;
@@ -25,7 +22,6 @@
 			height: 44px;
 			background-image: url(https://i.loli.net/2018/04/19/5ad850a477589.png);
 		}
-
 		.lock{
 		    background: #999;
 		    position: absolute;
@@ -37,28 +33,19 @@
 		    z-index: 998;
 		    display: none;   
 		}
-
-
-	</style>
-
-	<script>
-
+</style>
+<script>
 		$(function () {
 			var sW=$(window).width();
         	var bodyH=$(document).height();
-
 	        var top=($(window).height()-$('.Dialog').height())/2;
 	        var left=($(window).width()-$('.Dialog').width())/2;
 	        $('.Dialog').css('top',top).css('left',left);
-
-
 			$(window).resize(function () {
 				var top=($(window).height()-$('.Dialog').height())/2;
 	        	var left=($(window).width()-$('.Dialog').width())/2;
 	        	$('.Dialog').css('top',top).css('left',left);
 			});
-        	
-
         	//显示遮罩层
       	$('.lock').css({                       //遮罩层的样式
              height:bodyH,               //遮罩层的高是body内容的高
@@ -66,23 +53,20 @@
              display:"block"             //显示遮罩层
          });
          $('.Dialog').css('display','block');//提示框
-
          $('#Dialog_close').click(function () {
          	$('.Dialog').css('display','none');//提示框
          	$('.lock').css('display','none');//提示框
          });
-
 		});
 	</script>
-	
 	<div class="activity">
 		<a href="#">
-			<div class="Dialog">
-				<span id="Dialog_close"></span>
-			</div>
+		<div class="Dialog">
+			<span id="Dialog_close"></span>
+		</div>
 		</a>
-		<div class="lock"></div>
+		<div class="lock">
+		</div>
 	</div>
-	
 </body>
 </html>
