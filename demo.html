@@ -12,6 +12,8 @@
 			width: 560px;
 			height: 487px;
 			z-index: 999;
+			top: 10%;
+			left: 32%;
 		}
 		
 		.activity .Dialog img{
@@ -44,7 +46,7 @@
         	var bodyH=$(document).height();
 	        var top=($(window).height()-$('.Dialog').height())/2;
 	        var left=($(window).width()-$('.Dialog').width())/2;
-	        $('.Dialog').css('top',top).css('left',left);
+	        // $('.Dialog').css('top',top).css('left',left);
 			$(window).resize(function () {
 				var top=($(window).height()-$('.Dialog').height())/2;
 	        	var left=($(window).width()-$('.Dialog').width())/2;
@@ -63,6 +65,7 @@
          });
 		});
 	</script>
+
 	<div class="activity">
 		<div class="Dialog">
 			<a href="http://0551shengteng.com/public/pages/0551/" target="_blank"><img src="http://shengteng.net.cn/static/index/static/images/activity/pc/dialog.png"></a>
